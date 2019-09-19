@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cls 09</title>
+    <script src="js/vue.js"></script> 
+</head>
+<body>
+   <div id="app">
+      <div v-if=name>
+        Hello True
+      </div>  
+
+       <div v-else-if=age>
+        24
+      </div>
+
+      <button @click=showName>Show name| {{ name }}</button>
+      <button @click=showAge>Show age| {{ age }}</button>
+   
+   </div>
+   
+   <script>
+         let abc = new Vue({
+               el: '#app',
+               data: {
+                  name: true,
+                  age: true
+                    
+               },
+            methods:{
+                showName(){
+                    this.name = !this.name
+                },
+                showAge(){
+                    this.age = !this.age
+
+                }
+             }  
+          
+         })
+   </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class-03 Data Binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<style>
+        .one{
+           background: orange;
+        }
+        .two{
+           
+            
+            color: aqua;
+        }
+   </style>
+<body>
+    <div id="app">
+     <a v-bind:href="Facebook">Facebook</a>
+     <h1 :class="classes">Class</h1>
+      <input type="text" :value="name">  
+    
+    </div>
+
+   <script>
+        let abc = new Vue({
+            el: '#app',
+            data:{
+               Facebook: 'https://www.facebook.com/',
+               classes: ['one','two'],
+               name: 'Hamim',
+            },
+            methods:{
+       
+            }    
+   });
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cls five event</title>
+    <script src="vue.js"></script>
+   <style>
+        .canvas{
+            height: 250px;
+            width: 250px;
+            margin-top: 150px;
+            background:orange;
+        }
+   </style> 
+</head>
+<body>
+   <div id="app">
+            <button @click='Me'>Click Me</button>
+          <div class="canvas" @mousemove="ClickMe">
+                {{log.x}},{{log.y}}
+          </div>  
+       
+   </div>
+   
+   <script>
+         let abc = new Vue({
+               el: '#app',
+               data: {
+                   log:{
+                   x: 0,
+                   y: 0     
+               }
+            },
+               methods:{
+                   Me(event){
+                       console.log(event) 
+                   },
+                   ClickMe(e){
+                       this.log.x = e.offsetX
+                       this.log.y = e.offsetY
+                   }
+               }
+         });
+   </script>
+  
+</body>
+</html>

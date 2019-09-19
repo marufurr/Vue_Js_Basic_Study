@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cls 10</title>
+    <script src="js/vue.js"></script> 
+</head>
+<body>
+   <div id="app">
+      <p>Looping</p>
+        <ol>
+          <li v-for="name in names">{{ name }}</li>
+        </ol>
+        <hr>
+      <ul>
+          <li v-for="(fruit,index) in fruits">{{index}} => {{ fruit.name }} || {{ fruit.color }} || {{ fruit.weight }}</li>
+        </ul> 
+   
+   </div>
+   
+   <script>
+         let abc = new Vue({
+               el: '#app',
+
+               data: {
+                 names: ['sonia','maruf','maun','nipa','nila','hamim','sneha'],
+                fruits: [
+                      {name:'orange',color:'orange',weight:'230'},
+                      {name:'mango',color:'green',weight:'260'},
+                      {name:'guyava',color:'yello',weight:'270'},
+                      {name:'banana',color:'gray',weight:'250'},
+
+                 ]
+               },
+        
+
+            methods:{
+           
+          }
+         })
+   </script>
+</body>
+</html>

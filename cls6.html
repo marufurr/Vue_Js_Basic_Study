@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cls six event</title>
+    
+</head>
+<body>
+   <div id="app">
+     <h2>My name is {{name}}</h2> 
+     <input type="text" @keyup="NameChange">
+     <input type="text" @keypress="NameChange">
+   </div>
+   
+   <script>
+         let abc = new Vue({
+               el: '#app',
+               data: {
+                   name: 'Md.Marufur Rahman'
+                    
+               },
+            methods:{
+               NameChange(e){
+                   this.name = e.target.value
+                   //console.log(e.target.value)
+               }  
+          }
+              
+         })
+   </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</body>
+</html>

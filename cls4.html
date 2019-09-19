@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class-04 Data Binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+    <h1>My Earning Is {{ doller }} $per month</h1>
+    <!-- <button @click="doller++">+1</button> 
+    <button v-on:click="doller--">-1</button> -->
+       <button @dblclick="Amount(5)">+1</button> 
+      <button v-on:click="Amount(-5)">-1</button>
+    </div>
+
+   <script>
+    let abc = new Vue({
+      el: '#app',
+      data:{
+        doller: 10
+      },
+      methods:{
+          Amount(taka){
+            this.doller += taka
+          }
+      }    
+   });
+  </script>
+</body>
+</html>
